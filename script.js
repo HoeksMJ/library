@@ -7,13 +7,34 @@ function Book(title, author, pages, isRead) {
     this.isRead = isRead;
 }
 
-function addBookToLibrary(newBook){
-    library.push(newBook);
-    console.log(library);
+function addBookToLibrary(book){
+    library.push(book);
 }
 
-function displayNewBook(){
+function displayNewBook(book){
+    let div = document.getElementById("library");
+    let newDiv = document.createElement("div");
+    div.appendChild(newDiv);
 
+    let titleHeader = document.createElement("h1");
+    let bookTitle = document.createTextNode(`${book.title}`);
+    titleHeader.appendChild(bookTitle);
+    newDiv.appendChild(titleHeader);
+
+    let authorHeader = document.createElement("p");
+    let bookAuthor = document.createTextNode(`${book.author}`);
+    authorHeader.appendChild(bookAuthor);
+    newDiv.appendChild(authorHeader);
+
+    let pagesHeader = document.createElement("p");
+    let bookPages = document.createTextNode(`${book.pages}`);
+    pagesHeader.appendChild(bookPages);
+    newDiv.appendChild(pagesHeader);
+
+    let readHeader = document.createElement("p");
+    let bookIsRead = document.createTextNode(`${book.isRead}`);
+    readHeader.appendChild(bookIsRead);
+    newDiv.appendChild(readHeader);
 }
 
 function openForm(){
@@ -35,6 +56,7 @@ const DONEBTN = document.getElementById("doneBtn").addEventListener("click", () 
     let isRead = document.getElementById("isRead").checked;
     let newBook = new Book(title, author, pages, isRead);
     addBookToLibrary(newBook);
+    displayNewBook(newBook);
     closeForm();
 })
 
