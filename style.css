@@ -62,28 +62,66 @@ body {
 #formContainer {
     display: flex;
     flex-direction: column;
-    color:rgb(241, 223, 197);
-    font-size: 13px;
-    font-weight: bold;
-    font-family: sans-serif;
-    text-transform: uppercase;
     min-width: 400px;
 }
 
-#formContainer input {
-    color: white;
+#formContainer input[type="text"] {
+    color:rgb(241, 223, 197);
     background-color: rgba(241, 223, 197, 0.4);
-    border-style: hidden;
+    border-color: rgba(241, 223, 197, 0.4);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
     margin: 10px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 22px;
     font-weight: bold;
     font-family: sans-serif;
     letter-spacing: 5px;
 }
 
-#formContainer input:focus {
-    color: rgb(241, 223, 197);
-    background-color: rgb(241, 223, 197);
+#formContainer input[type="text"]:focus {
+    color:rgb(241, 223, 197);
+    outline: none;
+}
+
+#formContainer input[type="text"]::placeholder{
+    color:rgb(241, 223, 197);
+}
+
+#formContainer label {
+    color:rgb(241, 223, 197);
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+#isRead {
+    appearance: none;
+    margin: 5px;
+    background-color: rgba(241, 223, 197, 0.4);
+    border-color: rgba(241, 223, 197, 0.4);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-spacing: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    align-self: center;
+    transition: 0.2s;
+}
+
+#isRead:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+#isRead:checked {
+    background-color: rgba(0, 0, 0, 0.05);
+    chec
 }
 
 #library{
