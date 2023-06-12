@@ -45,7 +45,7 @@ function displayNewBook(book){
 }
 
 function openForm(){
-    document.getElementById("container").style.display="block";
+    document.getElementById("container").style.display="flex";
 }
 
 function closeForm(){
