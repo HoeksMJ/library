@@ -113,7 +113,7 @@ body {
     height: 30px;
     font-size: 22px;
     align-self: center;
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 #isRead:hover {
