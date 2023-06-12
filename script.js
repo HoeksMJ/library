@@ -31,25 +31,25 @@ function displayNewBook(book){
     pagesHeader.appendChild(bookPages);
     newDiv.appendChild(pagesHeader);
 
-    let readHeader = document.createElement("label");
-    readHeader.setAttribute("for", "checkbox" );
-    readHeader.innerText = "Read?";
     let readBox = document.createElement("input");
     readBox.setAttribute("type", "checkbox");
     readBox.setAttribute("class", "checkbox")
     if (book.isRead == true) {
         readBox.checked = true;
     }
-    newDiv.appendChild(readHeader);
     newDiv.appendChild(readBox);
 }
 
 function openForm(){
-    document.getElementById("container").style.display="flex";
+    document.getElementById("container").style.display = "flex";
 }
 
 function closeForm(){
-    document.getElementById("container").style.display="none";
+    document.getElementById("titleInput").value = ""
+    document.getElementById("authorInput").value = ""
+    document.getElementById("pagesInput").value = ""
+    document.getElementById("isRead").checked = false
+    document.getElementById("container").style.display = "none";
 }
 
 const CANCELBTN = document.getElementById("cancelBtn").addEventListener("click", () => {
