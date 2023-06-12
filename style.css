@@ -47,16 +47,17 @@ body {
 
 #container {
     display: hidden;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     border-style: solid;
     border-color: rgba(241, 223, 197, 0.4);
     border-radius: 5px;
     border-width: 1px;
-    margin-top: 20%;
+    margin-top: 250px;
     padding: 50px;
     display: flex;
     flex-direction: column;
     position: absolute;
+    align-items: center;
 }
 
 #formContainer {
@@ -67,17 +68,18 @@ body {
 
 #formContainer input[type="text"] {
     color:rgb(241, 223, 197);
-    background-color: rgba(241, 223, 197, 0.4);
+    background-color: transparent;
     border-color: rgba(241, 223, 197, 0.4);
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
     font-family: sans-serif;
+    text-transform: uppercase;
     letter-spacing: 5px;
+    transition: 2s;
 }
 
 #formContainer input[type="text"]:focus {
@@ -92,10 +94,10 @@ body {
 #formContainer label {
     color:rgb(241, 223, 197);
     font-size: 22px;
-    font-weight: bold;
     font-family: sans-serif;
+    text-transform: uppercase;
     letter-spacing: 5px;
-    text-align: center;
+    align-self: center;
 }
 
 #isRead {
@@ -110,18 +112,56 @@ body {
     width: 30px;
     height: 30px;
     font-size: 22px;
-    font-weight: bold;
-    font-family: sans-serif;
     align-self: center;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 #isRead:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: transparent;
+    cursor: pointer;
 }
+
+#isRead:focus {
+    outline: none;
+}
+
 #isRead:checked {
+    background-color: transparent;
+    left: 0.25em;
+    top: 0.50em;
+    width: 18px;
+    height: 30px;
+    border: solid rgb(241, 223, 197);
+    border-width: 0 0.20em 0.20em 0;
+    transform: rotate(45deg);
+}
+
+#btnContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 365px;
+}
+
+#btnContainer button {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 15px;
+    min-width: 150px;
+    border-style: solid;
+    border-color: rgba(241, 223, 197, 0.4);
+    border-radius: 5px;
+    border-width: 1px;
+    color:rgb(241, 223, 197);
+    font-size: 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: 0.2s;
+}
+
+#btnContainer button:hover {
     background-color: rgba(0, 0, 0, 0.05);
-    chec
 }
 
 #library{
