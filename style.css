@@ -57,6 +57,7 @@ body {
     flex-direction: column;
     position: absolute;
     align-items: center;
+    z-index: 1;
 }
 
 #formContainer {
@@ -230,6 +231,6 @@ body {
     height: 30px;
     border: solid rgb(241, 223, 197);
     border-width: 0 0.20em 0.20em 0;
-    rotate: 45deg;
     border-radius: 0px;
+    rotate: 45deg;
 }
