@@ -31,10 +31,17 @@ function displayNewBook(book){
     pagesHeader.appendChild(bookPages);
     newDiv.appendChild(pagesHeader);
 
-    let readHeader = document.createElement("p");
-    let bookIsRead = document.createTextNode(`${book.isRead}`);
-    readHeader.appendChild(bookIsRead);
+    let readHeader = document.createElement("label");
+    readHeader.setAttribute("for", "checkbox" );
+    readHeader.innerText = "Read?";
+    let readBox = document.createElement("input");
+    readBox.setAttribute("type", "checkbox");
+    readBox.setAttribute("class", "checkbox")
+    if (book.isRead == true) {
+        readBox.checked = true;
+    }
     newDiv.appendChild(readHeader);
+    newDiv.appendChild(readBox);
 }
 
 function openForm(){
