@@ -1,3 +1,8 @@
+* {
+    border-style: solid;
+    border-color: grey;
+}
+
 body {
     background-image: linear-gradient(rgb(201, 166, 121), rgb(58, 43, 27));
     background-repeat: no-repeat;
@@ -165,13 +170,13 @@ body {
 }
 
 #library {
-    border-style: solid;
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    min-width: 25vmin;
+    width: 80vmax;
 }
 
-#library div {
+.libraryDiv {
     display: flex;
     flex-direction: column;
     border-style: solid;
@@ -180,36 +185,35 @@ body {
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    margin: 15px;
-    padding: 15px;
-    min-width: 20em;
-    min-height: 20em;
+    margin: 1em;
+    padding: 1em;
+    width: 18em;
+    height: 18em;
     transition: 1s;
     box-shadow: 0px 0px 20px 0px rgba(241, 223, 197, 0.4);
 }
 
-#library div h1 {
-    color:rgb(241, 223, 197);
-    font-size: 2em;
-    font-family: sans-serif;
-    letter-spacing: 5px;
-}
-
-#library div p, label {
+.libraryDiv h1 {
     color:rgb(241, 223, 197);
     font-size: 1.5em;
     font-family: sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 0.3em;
+    text-align: center;
 }
 
-#library div:hover {
-    padding: 30px;
+.libraryDiv p, label {
+    color:rgb(241, 223, 197);
+    font-size: 1em;
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+}
+
+.libraryDiv:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-#library div input {
+.libraryDiv input {
     appearance: none;
-    margin: 5px;
     background-color: rgba(241, 223, 197, 0.4);
     border-color: rgba(241, 223, 197, 0.4);
     border-style: solid;
@@ -218,17 +222,18 @@ body {
     border-spacing: 5px;
     width: 30px;
     height: 30px;
+    margin: 5px;
     font-size: 22px;
     align-self: center;
     transition: 0.1s;
 }
 
-#library div input:hover {
+.libraryDiv input:hover {
     background-color: transparent;
     cursor: pointer;
 }
 
-#library div input:checked {
+.libraryDiv input:checked {
     background-color: transparent;
     left: 0.25em;
     top: 0.50em;
@@ -238,4 +243,21 @@ body {
     border-width: 0 0.20em 0.20em 0;
     border-radius: 0px;
     rotate: 45deg;
+}
+
+.libraryDiv div {
+    color:rgb(241, 223, 197);
+    font-size: 1em;
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+    border-style: solid;
+    border-color: rgba(241, 223, 197, 0.4);
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 0.2em;
+}
+
+.libraryDiv div:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
 }
