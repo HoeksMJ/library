@@ -14,6 +14,7 @@ function addBookToLibrary(book){
 function displayNewBook(book){
     let div = document.getElementById("library");
     let newDiv = document.createElement("div");
+    newDiv.className = "libraryDiv";
     div.appendChild(newDiv);
 
     let titleHeader = document.createElement("h1");
