@@ -11,10 +11,18 @@ function addBookToLibrary(book){
     library.push(book);
 }
 
+const BOOK_ONE = new Book("Mere Christianity", "CS Lewis", "256", true);
+const BOOK_TWO = new Book("The Meaning of Marriage", "Timothy Keller", "352", true);
+addBookToLibrary(BOOK_ONE);
+addBookToLibrary(BOOK_TWO);
+displayNewBook(BOOK_ONE);
+displayNewBook(BOOK_TWO);
+
 function displayNewBook(book){
     let div = document.getElementById("library");
     let newDiv = document.createElement("div");
-    newDiv.id = `libraryDiv${library.indexOf(book)}`;
+    newDiv.id = `bookItem${library.indexOf(book) + 1}`;
+    newDiv.className = "libraryDiv";
     console.log(newDiv.id);
     div.appendChild(newDiv);
 
