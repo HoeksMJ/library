@@ -14,7 +14,8 @@ function addBookToLibrary(book){
 function displayNewBook(book){
     let div = document.getElementById("library");
     let newDiv = document.createElement("div");
-    newDiv.className = "libraryDiv";
+    newDiv.id = `libraryDiv${library.indexOf(book)}`;
+    console.log(newDiv.id);
     div.appendChild(newDiv);
 
     let titleHeader = document.createElement("h1");
@@ -68,6 +69,9 @@ const DONEBTN = document.getElementById("doneBtn").addEventListener("click", () 
     closeForm();
 })
 
-const NEWBOOKBTN = document.getElementById("newBookBtn").addEventListener("click", ()=>{
+const NEWBOOKBTN = document.getElementById("newBookBtn").addEventListener("click", () => {
     openForm();
 })
+
+const REMOVEBTN = document.querySelectorAll(".removeBtn");
+console.log(REMOVEBTN);
