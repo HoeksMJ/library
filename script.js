@@ -21,7 +21,7 @@ displayNewBook(BOOK_TWO);
 function displayNewBook(book){
     let div = document.getElementById("library");
     let newDiv = document.createElement("div");
-    newDiv.id = `bookItem${library.indexOf(book) + 1}`;
+    newDiv.id = `bookItem${library.indexOf(book)}`;
     newDiv.className = "libraryDiv";
     div.appendChild(newDiv);
 
@@ -49,8 +49,11 @@ function displayNewBook(book){
     newDiv.appendChild(readBox);
 
     let removeBtn = document.createElement("div");
+    removeBtn.addEventListener("click", () => {
+        removeBook(removeBtn.id);
+    })
     let removeBtnTxt = document.createTextNode("Remove");
-    removeBtn.id = `${library.indexOf(book) + 1}`;
+    removeBtn.id = `${library.indexOf(book)}`;
     removeBtn.appendChild(removeBtnTxt);
     newDiv.appendChild(removeBtn);
 
@@ -93,5 +96,9 @@ const NEWBOOKBTN = document.getElementById("newBookBtn").addEventListener("click
     openForm();
 })
 
-const REMOVEBTN = document.querySelectorAll(".removeBtn");
-console.log(REMOVEBTN);
+function removeBook(index) {
+    let div = document.getElementById("library");
+    let book = document.getElementById(`bookItem${index}`)
+    library.splice(index, 1);
+    div.removeChild(book);
+}
