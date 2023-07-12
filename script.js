@@ -23,7 +23,6 @@ function displayNewBook(book){
     let newDiv = document.createElement("div");
     newDiv.id = `bookItem${library.indexOf(book) + 1}`;
     newDiv.className = "libraryDiv";
-    console.log(newDiv.id);
     div.appendChild(newDiv);
 
     let titleHeader = document.createElement("h1");
@@ -48,6 +47,19 @@ function displayNewBook(book){
         readBox.checked = true;
     }
     newDiv.appendChild(readBox);
+
+    let removeBtn = document.createElement("div");
+    let removeBtnTxt = document.createTextNode("Remove");
+    removeBtn.id = `${library.indexOf(book) + 1}`;
+    removeBtn.appendChild(removeBtnTxt);
+    newDiv.appendChild(removeBtn);
+
+    let editBtn = document.createElement("div");
+    let editBtnTxt = document.createTextNode("Edit");
+    editBtn.id = removeBtn.id;
+    editBtn.appendChild(editBtnTxt);
+    newDiv.appendChild(editBtn);
+
 }
 
 function openForm(){
